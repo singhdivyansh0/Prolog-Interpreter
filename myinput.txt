@@ -1,0 +1,219 @@
+
+male(dasa).
+male(kuru).
+male(shantanu).
+male(parsara).
+male(bhishma).
+male(vichitravirya).
+male(vyasa).
+male(vidura).
+male(dhritrashtra).
+male(bhegdatta).
+male(pandu).
+male(indra).
+male(vayu).
+male(dharma).
+male(surya).
+male(ashwins).
+male(karna).
+male(nakul).
+male(sahadev).
+male(bheem).
+male(muru).
+male(arjun).
+male(duryodhana).
+male(dushashan).
+male(jayadrata).
+male(yudhishthir).
+male(satatika).
+male(srutakarma).
+male(satusoma).
+male(prativindhya).
+male(srutakirti).
+male(abhimanyu).
+male(iravan).
+male(babhruvahana).
+male(laxman).
+male(samba).
+male(ghatotkacha).
+male(barbarika).
+male(janamejaya).
+male(parikchit).
+
+female(satyavati).
+female(ganga).
+female(ambika).
+female(ambalika).
+female(sudri).
+female(madri).
+female(kunti).
+female(gandhari).
+female(draupadi).
+female(subhadra).
+female(ulupi).
+female(chitrangada).
+female(uttara).
+female(iravati).
+female(dushala).
+female(bhanumati).
+female(lakshmana).
+female(hidimba).
+female(maurvi).
+
+married(satyavati,shantanu).
+married(satyavati,parsara).
+married(ganga,shantanu).
+married(sudri,vyasa).
+married(ambalika,vichitravirya).
+married(ambalika,vyasa).
+married(ambika,vichitravirya).
+married(ambika,vyasa).
+married(gandhari,dhritrashtra).
+married(madri,ashwins).
+married(madri,pandu).
+married(kunti,pandu).
+married(kunti,surya).
+married(kunti,indra).
+married(kunti,vayu).
+married(kunti,dharma).
+married(draupadi,arjun).
+married(draupadi,bheem).
+married(draupadi,nakul).
+married(draupadi,sahadev).
+married(draupadi,yudhishthir).
+married(dushala,jayadrata).
+married(bhanumati,duryodhana).
+married(lakshmana,samba).
+married(hidimba,bheem).
+married(maurvi,ghatotkacha).
+married(subhadra,arjun).
+married(ulupi,arjun).
+married(chitrangada,arjun).
+married(uttara,abhimanyu).
+married(iravati,parikchit).
+married(shantanu,satyavati).
+married(parsara,satyavati).
+married(shantanu,ganga).
+married(vyasa,sudri).
+married(vichitravirya,ambalika).
+married(vyasa,ambalika).
+married(vichitravirya,ambika).
+married(vyasa,ambika).
+married(dhritrashtra,gandhari).
+married(ashwins,madri).
+married(pandu,madri).
+married(pandu,kunti).
+married(surya,kunti).
+married(indra,kunti).
+married(vayu,kunti).
+married(dharma,kunti).
+married(arjun,draupadi).
+married(bheem,draupadi).
+married(nakul,draupadi).
+married(sahadev,draupadi).
+married(yudhishthir,draupadi).
+married(jayadrata,dushala).
+married(duryodhana,bhanumati).
+married(samba,lakshmana).
+married(bheem,hidimba).
+married(ghatotkacha,maurvi).
+married(arjun,subhadra).
+married(arjun,ulupi).
+married(arjun,chitrangada).
+married(abhimanyu,uttara).
+married(parikchit,iravati).
+
+child(satyavati,dasa).
+child(shantanu,kuru).
+child(bhisma,shantanu).
+child(bhisma,ganga).
+child(vyasa,satyavati).
+child(vyasa,parsara).
+child(vidur,vyasa).
+child(vidur,sudri).
+child(vichitravirya,satyavati).
+child(vichitravirya,shantanu).
+child(dhritrashtra,vyasa).
+child(dhritrashtra,ambika).
+child(pandu,ambalika).
+child(pandu,vyasa).
+child(duryodhana,dhritrashtra).
+child(duryodhana,gandhari).
+child(dushala,dhritrashtra).
+child(dushala,gandhari).
+child(dushashan,dhritrashtra).
+child(dushashan,gandhari).
+child(bhanumati,bhegdatta).
+child(laxman,duryodhana).
+child(laxman,bhanumati).
+child(lakshmana,duryodhana).
+child(lakshmana,bhanumati).
+child(nakul,ashwins).
+child(sahadev,ashwins).
+child(arjun,indra).
+child(bheem,vayu).
+child(yudhishthir,dharma).
+child(nakul,madri).
+child(sahadev,madri).
+child(arjun,kunti).
+child(bheem,kunti).
+child(yudhishthir,kunti).
+child(ghatotkacha,bheem).
+child(ghatotkacha,hidimba).
+child(maurvi,muru).
+child(barbarika,ghatotkacha).
+child(barbarika,maurvi).
+child(babhruvahana,chitrangada).
+child(babhruvahana,arjun).
+child(abhimanyu,subhadra).
+child(abhimanyu,arjun).
+child(iravan,arjun).
+child(irwan,ulupi).
+child(parikchit,abhimanyu).
+child(parikchit,uttara).
+child(janamejaya,parikchit).
+child(janamejaya,iravati).
+child(satatika,draupadi).
+child(srutakarma,draupadi).
+child(satusoma,draupadi).
+child(prativindhya,draupadi).
+child(srutakirti,draupadi).
+child(srutakirti,arjun).
+child(satusoma,bheem).
+child(satatika,nakul).
+child(srutakarma,sahadev).
+child(prativindhya,yudhishthir).
+
+ancestor(X,Y) :- child(Y,X).
+descendent(X,Y) :- child(X,Y).
+nth_cousin(X,Y) :- cousin(X,Y).
+marry(X,Y) :- married(X,Y).
+marry(X,Y) :- married(Y,X).
+parent(X,Y) :- child(Y,X).
+father(X,Y) :- child(Y,X),male(X).
+mother(X,Y) :- child(Y,X),female(X).
+stepfather(X,Y) :- child(Y,Z),female(Z),married(X,Z),not(child(Y,X)).
+stepmother(X,Y) :- child(Y,Z),male(Z),married(Z,X),not(child(Y,X)).
+uncle(X,Y) :- child(Y,Z),brother(X,Z).
+aunt(X,Y) :- child(Y,Z),sister(X,Z).
+
+sibbling(X,Y) :- parent(Z,X), parent(Z,Y).
+sibbling(X,Y) :- parent(Z,X), stepparent(Z,Y), dif(X,Y).
+sibblinginlaw(X,Y) :- marry(Y,Z), sibbling(X,Z).
+sisterinlaw(X,Y) :- female(X),sibblinginlaw(X,Y).
+
+sisterinlaw(X,Y) :- married(Y,Z),sister(X,Z).
+brotherinlaw(X,Y) :- married(Y,Z),brother(X,Z).
+fatherinlaw(X,Y) :- married(Z,Y),child(Z,X),male(X).
+ancestor(X,Y) :- child(Z,X),ancestor(Z,Y).
+descendent(X,Y) :- child(Z,Y),descendent(X,Z).
+grandparent(X,Y) :- child(Z,X),child(Y,Z).
+stepchild(X,Y) :- married(Z,Y),child(X,Z),not(child(X,Y)).
+
+
+sisterinlaw(X,Y)?
+
+
+fib(1,1).
+fib(2,1).
+fib(A,C) :- fib(A-1,P),fib(A-2,L),C=P+L.
